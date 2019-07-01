@@ -1,0 +1,170 @@
+{%extends 'nav.html' %}
+{%block head%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The 90's Show</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="{{url_for('static', filename='java_script.js')}}"></script>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  
+</head>
+<body>
+{%endblock%}
+{%block body%}
+<div class="loader">
+	<div class="loader-inner">
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+	</div>
+</div>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+	  <div class="carousel-item active">
+		  <img class="d-block w-100" src="static/img/junglebook.jpg" alt="900x400" data-holder-rendered="true" style="width: 600px; height: 400px;">
+	  </div>
+	  <div class="carousel-item ">
+      <img class="d-block w-100" src="static/img/dora.jpg" data-src="holder.js/900x400?theme=social" alt="900x400" data-holder-rendered="true" style="width: 800px; height: 400px;">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="static/img/animated.jpg" alt="900x400" data-holder-rendered="true" style="width: 600px; height: 400px;">
+    </div>
+	  <div class="carousel-item">
+		  <img class="d-block w-100" src="static/img/beyblade.jpg" alt="900x400" data-holder-rendered="true" style="width: 600px; height: 400px;">
+	  </div>
+	  <div class="carousel-item">
+		  <img class="d-block w-100" src="static/img/Hatim-Episodes.jpg" alt="900x400" data-holder-rendered="true" style="width: 600px; height: 400px;">
+	  </div>
+	  <div class="carousel-item">
+		  <img class="d-block w-100" src="static/img/pokemon.jpg" alt="900x400" data-holder-rendered="true" style="width: 600px; height: 400px;">
+	  </div>
+	  <div class="carousel-item">
+		  <img class="d-block w-100" src="static/img/scooby.jpg" alt="900x400" data-holder-rendered="true" style="width: 600px; height: 400px;">
+	  </div>
+	  <div class="carousel-item">
+		  <img class="d-block w-100" src="static/img/tomnjerry.jpg" alt="900x400" data-holder-rendered="true" style="width: 600px; height: 400px;">
+	  </div>
+	  <div class="carousel-item">
+		  <img class="d-block w-100" src="static/img/shaktimaan.jpg" alt="900x400" data-holder-rendered="true" style="width: 600px; height: 400px;">
+	  </div>
+	  <div class="carousel-item">
+		  <img class="d-block w-100" src="static/img/friends.jpeg" alt="900x400" data-holder-rendered="true" style="width: 600px; height: 400px;">
+	  </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-10">
+      <div ><img src="static/img/90'scartoon.jpg" style="height:300px ;width:900px" class="img-fluid" alt="Responsive image"></div>
+      <br><p class="lead" ><b>The 90s are considered by many to be a golden age of cartoons and TV Shows. They were weird, they were crazy, they were perfect. The 90s gave us classics like Hatim, Shaktiman, Scooby Doo, Tom & Jerry that are incredible creations that can never be equaled today. If you grew up in the 90s, you knew the joy of waking up early on a Saturday morning, racing to the TV, and spending hours fighting with your siblings over who got the remote.</b></p>
+      <br>
+      <h2>Ocean of Memories </h2><br>
+      <div ><img src="static/img/cartoons.jpg" style="height:300px ;width:900px" class="img-fluid" alt="Responsive image"></div>
+      <br><p class="lead">Lets See how many of these show do you remember. Navigate the site and relive your childhood memories by spending some time with your favourite buddies. This site is not just for 90's kids but also for the new generation to explore the golden era of original cartoons. Please give your valuable suggestions and queries or if your favourite show is not listed post it in the feedback section .</p>
+    </div>
+
+	 <div class="col-sm-2">
+      <h2>About Me</h2>
+      <h5><b>Shivansh Bhardwaj</b><br></h5>
+      <p><b>Btech :</b> Malaviya National Institute of Technology</p>
+      <h3>Public Opinion :</h3>
+      <p>Hey Folks let us know your favourite TV Shows, Cartoons :</p>
+     
+    <form method="POST" action="/success">
+  	<div class="form-group">
+    		<label for="name">Name</label>
+    		<input type="text" class="form-control" name="name" placeholder="" required>
+  	</div>
+  	<div class="form-group">
+    		<label for="email">Email</label>
+    		<input type="email" class="form-control" name="email" placeholder="" required>
+  	</div>
+	<label >Favorite Cartoon</label>
+	<select class="custom-select mt-2"  name="favCart">
+  		<option  value="Doraemon">Doraemon</option>
+  		<option value="Ben Ten">Ben Ten</option>
+  		<option value="Tom and Jerry">Tom and Jerry</option>
+      <option value="Ben Ten">Kochikame</option>
+      <option value="Ben Ten">DragonBallZ</option>
+      <option value="Ben Ten">Beyblade</option>
+      <option value="Ben Ten">ShakaLakaBoomBoom</option>
+      <option value="Ben Ten">The PowerPuff Girls</option>
+      <option value="Ben Ten">Ed,Edd and Eddy</option>
+      <option value="Ben Ten">Johnny Bravo</option>
+      <option value="Ben Ten">Courage The Cowardly Dog</option>
+      <option value="Ben Ten">Teen Titans</option>
+      <option value="Ben Ten">Ben10</option>
+      <option value="Ben Ten">Popeye The Sailor Man</option>
+      <option value="Ben Ten">Scooby Doo</option>
+      <option value="Ben Ten">Mickey Mouse</option>
+      <option value="Ben Ten">Winnie The Pooh</option>
+      <option value="Ben Ten">Jungle Book</option>
+      <option value="Ben Ten">Beauty and the Beast</option>
+      <option value="Ben Ten">Sleeping Beauty</option>
+      <option value="Ben Ten">The Lion King</option>   
+      <option value="Ben Ten">Pinocchio</option>
+      <option value="Ben Ten">Oswald</option>
+      <option value="Ben Ten">Pokemon</option>
+      <option value="Ben Ten">Chhota Bheem</option>
+      <option value="Ben Ten">Noddy</option>
+      <option value="Ben Ten">Bob The Builder</option>
+      <option value="Ben Ten">Baby Loony Toons</option>
+      <option value="Ben Ten">The Simpsons</option>
+	</select>
+	<label class="mt-3">Favorite TV Show</label>
+	<select class="custom-select mt-1" name="favShow">
+  		<option value="Hatim">Hatim</option>
+  		<option value="Shaktiman">Shaktiman</option>
+      <option value="Ben Ten">Hero</option>
+      <option value="Ben Ten">Friends</option>
+      <option value="Ben Ten">Son Pari</option>
+      <option value="Ben Ten">Alif Laila</option>
+      <option value="Ben Ten">MahaBharat</option>
+      <option value="Ben Ten">Malgudi Days</option>
+      <option value="Ben Ten">Vikram aur Betal</option>
+       <option value="Ben Ten">Mr Bean</option>
+      <option value="Ben Ten">Takeshi's Castle</option>
+      <option value="Ben Ten">Aladdin</option>
+        <option value="Ben Ten">Snow White</option>
+        <option value="Ben Ten">PowerRangers-SPD</option>
+	</select>
+	<br> <br>
+	<input type="Submit" class="btn btn-success" value="Submit">
+       </form>
+    </div>
+  {%endblock%}
+{%block tail%}
+<div class="container-fluid text-center bg-secondary  mt-5 p-4" >
+  <p style="color:white">We Appreciate your Feedback</p>
+  <p style="color:white">&copy Shivansh Bhardwaj</p>
+</div>
+
+</body>
+</html>
+{%endblock%}
