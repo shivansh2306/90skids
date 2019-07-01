@@ -132,7 +132,7 @@
       for (letter in currentQuestion.answers) {
         // ...add an HTML radio button
         answers.push(
-          `<label class="btn btn-primary btn-lg col-sm-5 mx-2 " id="lab">
+          `<label class="btn btn-primary " id="lab">
              <input type="radio" name="question${questionNumber}"  value="${letter}">
               ${currentQuestion.answers[letter]}
            </label>`
